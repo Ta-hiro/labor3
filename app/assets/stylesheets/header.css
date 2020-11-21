@@ -1,0 +1,25 @@
+.header{
+  background-color: lightblue;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+}
+
+.title-logo{
+  font-size: 50px;
+}
+
+.header-rigth{
+  font-size: 25px;
+}
+
+.lists-right{
+  list-style: none;
+  
+}
