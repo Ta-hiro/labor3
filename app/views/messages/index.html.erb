@@ -2,7 +2,12 @@
   <div class="main">
     <div class="side_list">
     メンバー
-    
+      <% @user.each do |user|%>
+        <li class='name_list'>
+          <%=user.name%>
+        </li>
+      <%end%>
+
     </div>
     <div class="chat_space">
     チャット画面
