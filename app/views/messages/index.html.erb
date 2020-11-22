@@ -1,16 +1,47 @@
 <%= render "shared/header"%> 
   <div class="main">
-    <div class="side_list">
-    メンバー
-      <% @user.each do |user|%>
-        <li class='name_list'>
-          <%=user.name%>
-        </li>
-      <%end%>
+    <div class="side"> 
+      <div class="side_list">
+        <b>Member</b>
+        <% @user.each do |user|%>
+          <li class='name_list'>
+            <%=user.name%>
+          </li>
+        <%end%>
+      </div>
 
     </div>
     <div class="chat_space">
-    チャット画面
+      <div class="chat">
+<!--
+        <%# <% @message.each do |message|%> %>
+          <%# <li class='chat_text'> %>
+            <%# <div class=""> %>
+            <%# <%=message.user.name%> %>
+            <%# </div> %>
+            <%# <div class=""> %>
+            <%# <%=message.content%> %>
+            <%# </div> %>
+          <%# </li> %>
+        <%# <%end%> %>
+-->
+      </div>
     </div>
   </div>
-<%= render "shared/footer1"%> 
+<%# <%= render "shared/footer1"%>  
+<%# <%= render partial: "shared/footer1", locals: { message: @message }%> 
+  <div class="footer">
+    <div>
+    </div>
+    <h1>フッター１</h1>
+    <div class="footer-form">
+      <%= form_with model: @messege, url: messages_path, class: 'message-form', local: true do |f| %>
+        <div>
+        <%= f.text_area :content, class:"text-form", id:"text-form", placeholder:"text（1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+        <div>
+        <%= f.submit "送信" ,class:"message-btn" %>
+        </div>
+      <%end%>
+    </div>
+  </div>

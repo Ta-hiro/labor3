@@ -1,5 +1,28 @@
 .footer{
   background-color: gray;
   width: 100vw;
+  height: 14vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.message-form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-form{
+  width: 40vw;
   height: 10vh;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+.message-btn{
+  width: 5vw;
+  height: 5vh;
+  background-color: lightgray;
+  border: 2px solid black;
+  margin: 5px;
 }

@@ -1,3 +1,15 @@
 <div class="footer">
+  <div>
+  </div>
   <h1>フッター１</h1>
+  <div class="footer-form">
+    <%= form_with model: @message, url: messages_path, class: 'message-form', local: true do |f| %>
+      <div>
+      <%= f.text_area :content, class:"text-form", id:"text-form", placeholder:"text（1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div>
+      <%= f.submit "送信" ,class:"message-btn" %>
+      </div>
+    <%end%>
+  </div>
 </div>
