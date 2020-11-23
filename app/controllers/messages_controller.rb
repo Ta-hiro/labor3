@@ -2,17 +2,19 @@ class MessagesController < ApplicationController
 
   def index
     @user = User.all
-    # @messeges = Message.all
-    @messege = Message.new
+    @message = Message.new
+    @messages = Message.all
   end
 
   def new
-    @messege = Message.new
+  end
+
+  def show
   end
 
   def create
-    @messege = Message.new(message_params)
-    if @messege.save
+    @message = Message.new(message_params)
+    if @message.save
       redirect_to root_path
     else
       render action: :index

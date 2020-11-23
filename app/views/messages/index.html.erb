@@ -13,18 +13,21 @@
     </div>
     <div class="chat_space">
       <div class="chat">
-<!--
-        <%# <% @message.each do |message|%> %>
-          <%# <li class='chat_text'> %>
-            <%# <div class=""> %>
-            <%# <%=message.user.name%> %>
-            <%# </div> %>
-            <%# <div class=""> %>
-            <%# <%=message.content%> %>
-            <%# </div> %>
-          <%# </li> %>
-        <%# <%end%> %>
--->
+        <% @messages.each do |messages|%>
+          <li class='chat_cohesive'>
+            <div class="chat_top">
+              <div class="chat_name">
+              <%=messages.user.name%>
+              </div>
+              <div class="chat_time">
+              <%=messages.created_at%>
+              </div>
+            </div>
+            <div class="chat_botom">
+            <%=messages.content%>
+            </div> 
+          </li> 
+        <%end%> 
       </div>
     </div>
   </div>
@@ -35,7 +38,7 @@
     </div>
     <h1>フッター１</h1>
     <div class="footer-form">
-      <%= form_with model: @messege, url: messages_path, class: 'message-form', local: true do |f| %>
+      <%= form_with model: @message, url: messages_path, class: 'message-form', local: true do |f| %>
         <div>
         <%= f.text_area :content, class:"text-form", id:"text-form", placeholder:"text（1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
         </div>
