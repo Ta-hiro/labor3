@@ -4,9 +4,10 @@
   height: 15vh;
   display: flex;
   justify-content: space-around;
+  border: 4px double blue;
 }
 
-.header-left{
+.title{
   display: flex;
   align-items: center;
 }

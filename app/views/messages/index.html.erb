@@ -13,21 +13,46 @@
     </div>
     <div class="chat_space">
       <div class="chat">
+        <% if user_signed_in?%> 
         <% @messages.each do |messages|%>
-          <li class='chat_cohesive'>
-            <div class="chat_top">
-              <div class="chat_name">
-              <%=messages.user.name%>
-              </div>
-              <div class="chat_time">
-              <%=messages.created_at%>
+          <%if messages.user_id == current_user.id%>
+          <%# 自身のメッセ %>
+            <div class='c_chat_cohesive'>
+              <div class="chat_cohesive_inside">
+                <div class="chat_top">
+                  <div class="chat_name">
+                  <%=messages.user.name%>
+                  </div>
+                  <div class="chat_time">
+                  <%=messages.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
+                  </div>
+                </div>
+                <div class="c_chat_botom">
+                <%=messages.content %>
+                </div>
               </div>
             </div>
-            <div class="chat_botom">
-            <%=messages.content%>
+          <%else%>
+          <%# 自分以外のメッセ %>
+            <div class='chat_cohesive'>
+              <div class="chat_cohesive_inside">
+                <div class="chat_top">
+                  <div class="chat_name">
+                  <%=messages.user.name%>
+                  </div>
+                  <div class="chat_time">
+                  <%=messages.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
+                  </div>
+                </div>
+                
+                <div class="chat_botom">
+                <%=messages.content%>
+                </div>
+              </div> 
             </div> 
-          </li> 
+          <%end%>
         <%end%> 
+        <%end%>
       </div>
     </div>
   </div>
