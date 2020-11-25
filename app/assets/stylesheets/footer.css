@@ -4,7 +4,8 @@
   height: 14vh;
   display: flex;
   justify-content: space-around;
-  border: 3px solid black;
+  /* border: 3px solid black; */
+  background: linear-gradient(to bottom right, gray, azure);
 }
 
 .message-form{

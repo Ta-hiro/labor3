@@ -13,6 +13,7 @@
   border: 3px solid black;
   overflow:hidden;
   overflow-y:scroll;
+  background: linear-gradient(to bottom right, #a0a0a0, #c0c0c0);
 }
 
 .side_list{
@@ -27,8 +28,9 @@
 .chat_space{
   background-color: rgb(59, 59, 51);
   width: 80%;
-  overflow:hidden;
-  overflow-y:scroll;
+  overflow: hidden;
+  overflow-y: scroll;
+  
 
 }
 
@@ -57,6 +59,13 @@
 
 .chat_name{
   font-size: 14px;
+  margin: 0 0 0 0;
+  color: aliceblue;
+}
+
+.c_chat_name{
+  font-size: 14px;
+  margin: 0 0 0 auto;
   color: aliceblue;
 }
 
@@ -66,11 +75,16 @@
   color: aliceblue;
 }
 
+.c_chat_time{
+  font-size: 8px;
+  margin: 0 5px 0 10px;
+  color: aliceblue;
+}
+
 .chat_botom{
   display: inline;
   font-size: 18px;
-  background-color: rgb(128, 167, 241);
-  margin 5px;
+  background-color: #33ffff;
   /* border: 1px solid black; */
   padding: 5px;
   border-radius: 10px;
@@ -82,8 +96,7 @@
 .c_chat_botom{
   display: inline;
   font-size: 18px;
-  background-color: rgb(191, 241, 191);
-  margin 5px;
+  background-color:#99ff99;
   /* border: 1px solid black; */
   padding: 5px;
   border-radius: 10px;

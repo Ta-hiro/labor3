@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   
   root to: "messages#index"
   resources :messages, only: [:index, :create]
-  
+  resources :labors, only: [:new, :create]
 end

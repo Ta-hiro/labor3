@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-around;
   border: 4px double blue;
+  background: linear-gradient(to bottom right, #7fffff, #c1ffff);
 }
 
 .title{
@@ -14,6 +15,10 @@
 
 .title-logo{
   font-size: 50px;
+  background-color: aliceblue;
+  margin-top: 10px;
+  background: linear-gradient(to bottom right,#e0ffe0, #c1ffff);
+  border-radius: 30px;
 }
 
 .header-rigth{
@@ -23,4 +28,9 @@
 .lists-right{
   list-style: none;
   
+}
+
+.day{
+  font-size: 20px;
+  text-align: center;
 }

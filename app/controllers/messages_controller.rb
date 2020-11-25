@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
     @user = User.all
     @message = Message.new
     @messages = Message.all
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
   end
 
   def new
@@ -25,6 +26,7 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content).merge(user_id: current_user.id)
   end
+  
 end
 
 # :image

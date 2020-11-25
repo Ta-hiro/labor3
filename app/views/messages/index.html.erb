@@ -1,3 +1,4 @@
+
 <%= render "shared/header"%> 
   <div class="main">
     <div class="side"> 
@@ -9,10 +10,9 @@
           </li>
         <%end%>
       </div>
-
     </div>
     <div class="chat_space">
-      <div class="chat">
+      <div id="scroll-inner">
         <% if user_signed_in?%> 
         <% @messages.each do |messages|%>
           <%if messages.user_id == current_user.id%>
@@ -20,10 +20,10 @@
             <div class='c_chat_cohesive'>
               <div class="chat_cohesive_inside">
                 <div class="chat_top">
-                  <div class="chat_name">
+                  <div class="c_chat_name">
                   <%=messages.user.name%>
                   </div>
-                  <div class="chat_time">
+                  <div class="c_chat_time">
                   <%=messages.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
   <div class="footer">
     <div>
     </div>
-    <h1>フッター１</h1>
+    <%= link_to 'スケジュール提出', ' /labors/new',  class: "" %>
     <div class="footer-form">
       <%= form_with model: @message, url: messages_path, class: 'message-form', local: true do |f| %>
         <div>

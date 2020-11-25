@@ -1,0 +1,16 @@
+<%= render "shared/header"%>
+<h1>こんにちは</h1>
+  <%=form_with model: @labor, url: labors_path, local: true do |f|%>
+
+    <div>
+      <%= f.collection_select(:start_time_id, WTime.all, :id, :name, {}, {class:"select-box", id:""}) %>
+    </div>
+    <div>
+      <%= f.collection_select(:closing_time_id, WTime.all, :id, :name, {}, {class:"select-box", id:""}) %>
+    </div>
+    <div>
+      <%= f.submit "登録する" , class:"btn" %>
+    </div>
+
+  <%end%>
+<%= render "shared/footer2"%> 

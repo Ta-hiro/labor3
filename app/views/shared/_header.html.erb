@@ -2,10 +2,10 @@
   <div class="header-left">
     <div class="hedtit">
       <div class="title">
-      <%= link_to 'Labor', root_path,  class: "title-logo" %>
+      <%= link_to '< Labor >', root_path,  class: "title-logo" %>
       </div>
       <div class="day">
-      <%= Date.today%>
+      <%= Date.today%> <%= @wedays[Date.today.wday] %>
       </div>
     </div>
   </div>
