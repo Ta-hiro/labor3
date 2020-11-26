@@ -23,3 +23,5 @@ class LaborsController < ApplicationController
     params.require(:labor).permit(:work_day, :start_time_id, :closing_time_id, :comment).merge(user_id: current_user.id)
   end
 end
+
+# te
