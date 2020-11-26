@@ -2,17 +2,23 @@
   display: flex;
   width: 100vw;
   height: 70vh;
+  overflow:hidden;
+  overflow-y:scroll;
 }
 
 .side{
   background-color: lightgray;
   width: 20%;
   font-size: 20px;
-  
+  border: 3px solid black;
+  overflow:hidden;
+  overflow-y:scroll;
+  background: linear-gradient(to bottom right, #a0a0a0, #c0c0c0);
 }
 
 .side_list{
   margin: 20px;
+  border: 3px double blue;
 }
 
 .name_list{
@@ -20,6 +26,81 @@
 }
 
 .chat_space{
-  background-color: white;
+  background-color: rgb(59, 59, 51);
   width: 80%;
+  overflow: hidden;
+  overflow-y: scroll;
+  
+
+}
+
+.chat_cohesive{
+  /* border: 1px solid black; */
+  margin: 2px;
+}
+
+.c_chat_cohesive{
+  /* background-color: lightyellow; */
+  margin: 2px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat_cohesive_inside{
+  
+  display: inline;
+  
+}
+
+.chat_top{
+  display: flex;
+  
+}
+
+.chat_name{
+  font-size: 14px;
+  margin: 0 0 0 0;
+  color: aliceblue;
+}
+
+.c_chat_name{
+  font-size: 14px;
+  margin: 0 0 0 auto;
+  color: aliceblue;
+}
+
+.chat_time{
+  font-size: 8px;
+  margin: 0 0 0 10px;
+  color: aliceblue;
+}
+
+.c_chat_time{
+  font-size: 8px;
+  margin: 0 5px 0 10px;
+  color: aliceblue;
+}
+
+.chat_botom{
+  display: inline;
+  font-size: 18px;
+  background-color: #33ffff;
+  /* border: 1px solid black; */
+  padding: 5px;
+  border-radius: 10px;
+  /* white-space: pre; */
+  word-wrap: break-word;
+  /* width: 200px; */
+
+}
+.c_chat_botom{
+  display: inline;
+  font-size: 18px;
+  background-color:#99ff99;
+  /* border: 1px solid black; */
+  padding: 5px;
+  border-radius: 10px;
+  /* white-space: pre; */
+  word-wrap: break-word;
+  /* width: 200px; */
 }

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   # get 'messages/index'
   
   root to: "messages#index"
-  resources :messages, only: [:index, :create, :new]
-  
+  resources :messages, only: [:index, :create]
+  resources :labors, only: [:new, :create]
 end

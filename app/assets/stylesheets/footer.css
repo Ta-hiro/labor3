@@ -4,6 +4,8 @@
   height: 14vh;
   display: flex;
   justify-content: space-around;
+  /* border: 3px solid black; */
+  background: linear-gradient(to bottom right, gray, azure);
 }
 
 .message-form{
@@ -14,9 +16,11 @@
 
 .text-form{
   width: 40vw;
-  height: 10vh;
+  height: 8vh;
   border: 2px solid black;
   margin: 5px;
+  font-size: 18px;
+  border-radius: 15px;
 }
 
 .message-btn{
@@ -25,4 +29,6 @@
   background-color: lightgray;
   border: 2px solid black;
   margin: 5px;
+  font-size: 16px;
+  border-radius: 15px;
 }

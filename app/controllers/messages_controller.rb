@@ -2,17 +2,20 @@ class MessagesController < ApplicationController
 
   def index
     @user = User.all
-    # @messeges = Message.all
-    @messege = Message.new
+    @message = Message.new
+    @messages = Message.all
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
   end
 
   def new
-    @messege = Message.new
+  end
+
+  def show
   end
 
   def create
-    @messege = Message.new(message_params)
-    if @messege.save
+    @message = Message.new(message_params)
+    if @message.save
       redirect_to root_path
     else
       render action: :index
@@ -23,6 +26,7 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content).merge(user_id: current_user.id)
   end
+  
 end
 
 # :image
