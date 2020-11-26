@@ -14,6 +14,9 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    @user = User.all
+    @messages = Message.all
     @message = Message.new(message_params)
     if @message.save
       redirect_to root_path
@@ -24,7 +27,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
   
 end

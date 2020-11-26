@@ -3,7 +3,7 @@
   <div class="main">
     <div class="side"> 
       <div class="side_list">
-        <b>Member</b>
+        <div class="member">Member</div>
         <% @user.each do |user|%>
           <li class='name_list'>
             <%=user.name%>
@@ -29,6 +29,7 @@
                 </div>
                 <div class="c_chat_botom">
                 <%=messages.content %>
+                <%#= image_tag messages.image.variant(resize: '300x300'), class: 'message-image' if messages.image.attached? %>
                 </div>
               </div>
             </div>
@@ -61,14 +62,22 @@
   <div class="footer">
     <div>
     </div>
-    <%= link_to 'スケジュール提出', ' /labors/new',  class: "" %>
+    <%= link_to 'スケジュール提出', ' /labors/new',  class: "new_link" %>
     <div class="footer-form">
       <%= form_with model: @message, url: messages_path, class: 'message-form', local: true do |f| %>
         <div>
-        <%= f.text_area :content, class:"text-form", id:"text-form", placeholder:"text（1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :content, class:"text-form", placeholder:"text（1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
         </div>
         <div>
         <%= f.submit "送信" ,class:"message-btn" %>
+        </div>
+<!--
+        <div class="imagef">
+          <label class="form-image">
+          <span class="image-file">画像</span>
+          <input type="file" class="hidden">
+          </label>
+-->
         </div>
       <%end%>
     </div>
