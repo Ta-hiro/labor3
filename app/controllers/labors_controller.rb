@@ -6,6 +6,16 @@ class LaborsController < ApplicationController
   end
 
   def create
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    @labor = Labor.new(labor_params)
+    if @labor.save
+      redirect_to  new_labor_path
+    else
+      render action: :new
+    end
+  end
+
+  def show
   end
 
   private

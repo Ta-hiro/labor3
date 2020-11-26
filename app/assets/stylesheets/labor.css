@@ -1,0 +1,77 @@
+
+.labor_ti{
+  text-align: center;
+  font-size: 30px;
+  background-color: rgb(235, 225, 135);
+
+}
+
+.labor_main{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 62vh;
+  background: linear-gradient(to bottom right, lightgray, azure);
+}
+
+.input-day-wrap>select {
+  width: 80px;
+  margin-top: 5px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* label {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+}
+input[type="date"] {
+  position: relative;
+  padding: 0 10px;
+  width: 200px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #999;
+} */
+
+.dayf{
+  margin: 20px;
+  width: 300px;
+  height: 50px;
+}
+
+.time{
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.select-box{
+  margin: 0 0 0 0;
+  width: 150px;
+  height: 40px;
+}
+
+.comment{
+  width: 300px;
+  height: 50px;
+  margin: 10px;
+}
+
+.btn{
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+}

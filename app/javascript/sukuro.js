@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   let target = document.getElementById('scroll-inner');
   target.scrollIntoView(false);
 
-//   setTimeout(function(){
-//     window.location.reload(1);
-//  }, 5000);
+  // setTimeout(function(){
+  //    window.location.reload(1);
+  // }, 5000);
 });

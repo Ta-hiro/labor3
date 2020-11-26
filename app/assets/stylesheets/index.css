@@ -16,6 +16,10 @@
   background: linear-gradient(to bottom right, #a0a0a0, #c0c0c0);
 }
 
+.member{
+  background: linear-gradient(to bottom right, pink, #c0c0c0);
+}
+
 .side_list{
   margin: 20px;
   border: 3px double blue;
@@ -103,4 +107,8 @@
   /* white-space: pre; */
   word-wrap: break-word;
   /* width: 200px; */
+}
+
+.imagef{
+  display: block;
 }
