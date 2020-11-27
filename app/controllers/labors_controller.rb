@@ -8,7 +8,7 @@ class LaborsController < ApplicationController
   def create
     @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
     @labor = Labor.new(labor_params)
-    if @labor.save
+    if @labor.save!
       redirect_to  new_labor_path
     else
       render action: :new
@@ -23,3 +23,5 @@ class LaborsController < ApplicationController
     params.require(:labor).permit(:work_day, :start_time_id, :closing_time_id, :comment).merge(user_id: current_user.id)
   end
 end
+
+# i-0fce12a280d033784
