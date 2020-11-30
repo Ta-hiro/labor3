@@ -16,6 +16,9 @@ class LaborsController < ApplicationController
   end
 
   def show
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    # @schedule = Labor.find(params[:id])
+    @schedule = Labor.all
   end
 
   private
