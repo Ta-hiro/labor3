@@ -27,4 +27,3 @@ class LaborsController < ApplicationController
   end
 end
 
-# i-0fce12a280d033784
