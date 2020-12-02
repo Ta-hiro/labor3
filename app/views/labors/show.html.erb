@@ -1,3 +1,16 @@
 <%= render "shared/header"%>
 <div class="labor_ti">出勤確認　<未実装></div>
+
+  <% @schedule.each do |schedule|%>
+    <div>
+    <%= schedule.work_day%>
+    <%= schedule.start_time_id%>
+    <%= schedule %>
+    <%= schedule.closing_time_id%>
+    <%= schedule.comment%>
+    </div>
+  <%end%>
+  <%= WTime %>
+  
+
 <%= render "shared/footer2"%> 

@@ -8,7 +8,7 @@ class LaborsController < ApplicationController
   def create
     @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
     @labor = Labor.new(labor_params)
-    if @labor.save
+    if @labor.save!
       redirect_to  new_labor_path
     else
       render action: :new
@@ -16,6 +16,9 @@ class LaborsController < ApplicationController
   end
 
   def show
+    @wedays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    # @schedule = Labor.find(params[:id])
+    @schedule = Labor.all
   end
 
   private
@@ -24,4 +27,3 @@ class LaborsController < ApplicationController
   end
 end
 
-# te

@@ -1,24 +1,10 @@
 <%= render "shared/header"%>
-  <div class="labor_ti">出勤登録　<未実装></div>
+  <div class="labor_ti">出勤登録　<実装中バリデーション></div>
   <div class="labor_main">
     <%=form_with model: @labor, url: labors_path, local: true do |f|%>
-      <%# <div class='input-day-wrap'> %>
-        <%# <%= raw sprintf(
-                    f.date_select(
-                      :work_day,
-                      class:'select-work_dayh',
-                      id:"work_day-date",
-                      use_month_numbers: true,
-                      prompt:'--',
-                      start_year: 2020,
-                      date_separator: '%s'),
-                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %> 
-    <%# <lavel>
-      <input type="date" />
-    </label> %>
       <h2>日付</h2>
       <div class="dayf">
-        <%= f.date_field(:work_day) %>
+        <%= f.date_field :work_day, class:"calendar" %>
       </div>
       <h2>時間</h2>
       <div class="time">
@@ -40,3 +26,18 @@
     <%end%>
   </div>
 <%= render "shared/footer2"%> 
+
+      <%# <div class='input-day-wrap'> %>
+        <%# <%= raw sprintf(
+                    f.date_select(
+                      :work_day,
+                      class:'select-work_dayh',
+                      id:"work_day-date",
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: 2020,
+                      date_separator: '%s'),
+                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %> 
+      <%# <lavel>
+        <input type="date" />
+      </label> %>
